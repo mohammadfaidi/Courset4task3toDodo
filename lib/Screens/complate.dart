@@ -18,12 +18,12 @@ class ScreenA extends StatelessWidget {
                     itemCount: TP.basketItems.length,
                     itemBuilder: (context, index) {
                       return Card(
-                        child: ListTile(
+                        child: TP.basketItems[index].chekvalueText?ListTile(
                           title:TP.basketItems[index].chekvalueText?Text(TP.basketItems[index].valueText,style: TextStyle(fontSize: 17,color: Colors.red,fontWeight: FontWeight.bold)):null,
 
                           trailing: TP.basketItems[index].chekvalueText?Icon(Icons.favorite_rounded,color: Colors.red,):null,
                            
-                          ),
+                          ):null,
                         );
                       
                     },
